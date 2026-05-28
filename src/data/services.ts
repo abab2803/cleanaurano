@@ -289,9 +289,7 @@ export const services: Service[] = [
     short: "Profesjonell vask mellom gjester – inkludert sengeskifte og restocking.",
     icon: BedDouble,
     description:
-      "CleanAura er din pålitelige partner for Airbnb-, Booking- og korttidsutleie. Vi sørger for at boligen er hotell-ren mellom hver gjest, med ferskt sengetøy, fylte forbruksvarer og dokumentert kvalitet. Vi jobber raskt mellom check-out og check-in, og rapporterer eventuelle skader umiddelbart.
-
-",
+      "CleanAura er din pålitelige partner for Airbnb-, Booking- og korttidsutleie. Vi sørger for at boligen er hotell-ren mellom hver gjest, med ferskt sengetøy, fylte forbruksvarer og dokumentert kvalitet. Vi jobber raskt mellom check-out og check-in, og rapporterer eventuelle skader umiddelbart.",
     includes: [
       "Full rengjøring mellom hver gjest",
       "Sengeskifte og rene håndklær",
