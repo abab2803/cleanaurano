@@ -37,14 +37,14 @@ function CityDetail() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2 space-y-6">
-            {city.body.map((p, i) => (
+            {city.body.map((p: string, i: number) => (
               <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>
             ))}
 
             <div className="mt-8">
               <h2 className="text-2xl font-bold text-foreground">Bydeler og områder vi dekker i {city.name}</h2>
               <div className="mt-4 flex flex-wrap gap-2">
-                {city.neighborhoods.map((n) => (
+                {city.neighborhoods.map((n: string) => (
                   <span key={n} className="inline-flex items-center gap-1.5 rounded-full bg-primary-soft px-3 py-1.5 text-sm text-primary">
                     <MapPin className="h-3 w-3" /> {n}
                   </span>
