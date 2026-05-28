@@ -30,7 +30,7 @@ export const Route = createFileRoute("/tjenester/$slug")({
 });
 
 function ServiceDetail() {
-  const { service } = Route.useLoaderData();
+  const { service } = Route.useLoaderData() as { service: import("@/data/services").Service };
   return (
     <>
       <PageHero eyebrow="TJENESTE" title={service.title} subtitle={service.short} />

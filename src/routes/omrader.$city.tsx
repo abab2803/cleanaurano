@@ -29,7 +29,7 @@ export const Route = createFileRoute("/omrader/$city")({
 });
 
 function CityDetail() {
-  const { city } = Route.useLoaderData();
+  const { city } = Route.useLoaderData() as { city: import("@/data/cities").City };
   return (
     <>
       <PageHero eyebrow="OMRÅDE" title={`Rengjøring i ${city.name}`} subtitle={city.intro} />

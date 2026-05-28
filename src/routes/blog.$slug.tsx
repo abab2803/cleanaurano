@@ -38,7 +38,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPost() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: import("@/data/blog").BlogPost };
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
   return (
     <>
