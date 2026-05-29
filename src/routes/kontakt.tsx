@@ -28,7 +28,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border bg-card p-6">
               <Phone className="h-6 w-6 text-primary" />
               <h3 className="mt-3 font-semibold text-foreground">Telefon</h3>
-              <a href="tel:+4721000000" className="mt-1 block text-primary hover:underline">21 00 00 00</a>
+              <a href="tel:+4745131748" className="mt-1 block text-primary hover:underline">451 31 748</a>
               <p className="mt-1 text-sm text-muted-foreground">Hverdager 08:00–17:00</p>
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">
@@ -70,7 +70,7 @@ function ContactPage() {
               <div>
                 <h3 className="font-semibold text-foreground">Akutt rengjøring – samme dag</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Trenger du hjelp i dag? Vi har akutt-team på vakt i Oslo-området. Ring oss direkte på 21 00 00 00 – vi rykker ut innen 4 timer ved kapasitet.
+                  Trenger du hjelp i dag? Vi har akutt-team på vakt i Oslo-området. Ring oss direkte på 451 31 748 – vi rykker ut innen 4 timer ved kapasitet.
                 </p>
               </div>
             </div>

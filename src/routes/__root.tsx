@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "CleaningService",
           name: "CleanAura",
           url: "https://cleanaura.no",
-          telephone: "+47 21 00 00 00",
+          telephone: "+47 451 31 748",
           email: "post@cleanaura.no",
           address: { "@type": "PostalAddress", addressLocality: "Oslo", addressCountry: "NO" },
           areaServed: ["Oslo", "Bærum", "Asker", "Lillestrøm", "Drammen"],
