@@ -14,7 +14,7 @@ export function Footer() {
             CleanAura er din lokale, profesjonelle rengjøringspartner. Vi leverer skinnende rene resultater med kvalitet, pålitelighet og omtanke.
           </p>
           <div className="mt-5 space-y-2 text-sm text-muted-foreground">
-            <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> 21 00 00 00</p>
+            <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> 451 31 748</p>
             <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> post@cleanaura.no</p>
             <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Oslo, Norge</p>
           </div>

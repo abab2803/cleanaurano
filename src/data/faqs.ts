@@ -1,7 +1,7 @@
 export const allFaqs: { q: string; a: string }[] = [
   { q: "Hva er CleanAura?", a: "CleanAura er et profesjonelt rengjøringsfirma som tilbyr alt fra hjemmerengjøring og flyttevask til kontorvask og Airbnb-vask i Oslo og omegn." },
   { q: "Hvilke områder dekker dere?", a: "Vi dekker Oslo, Bærum, Asker, Lillestrøm, Drammen og omkringliggende kommuner." },
-  { q: "Hvordan får jeg et pristilbud?", a: "Fyll ut kontaktskjemaet eller ring oss på 21 00 00 00. Vi sender skriftlig tilbud innen 24 timer." },
+  { q: "Hvordan får jeg et pristilbud?", a: "Fyll ut kontaktskjemaet eller ring oss på 451 31 748. Vi sender skriftlig tilbud innen 24 timer." },
   { q: "Er det bindingstid på fast renhold?", a: "Nei. Du kan pause eller avslutte abonnementet når som helst." },
   { q: "Hva koster hjemmerengjøring?", a: "Prisene starter fra 690 kr per besøk for en mindre leilighet med ukentlig frekvens." },
   { q: "Tar dere med eget utstyr?", a: "Ja, vi tar med profesjonelt utstyr og miljøvennlige produkter." },

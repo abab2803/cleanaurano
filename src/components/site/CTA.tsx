@@ -14,8 +14,8 @@ export function CTASection({
           <Link to="/kontakt" className="inline-flex items-center gap-2 rounded-md bg-background px-6 py-3 text-sm font-semibold text-primary transition hover:bg-background/90">
             Få gratis tilbud <ArrowRight className="h-4 w-4" />
           </Link>
-          <a href="tel:+4721000000" className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/40 px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10">
-            Ring 21 00 00 00
+          <a href="tel:+4745131748" className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/40 px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10">
+            Ring 451 31 748
           </a>
         </div>
       </div>
