@@ -10,6 +10,7 @@ export type Service = {
   benefits: { title: string; desc: string }[];
   forWho: string;
   pricing: { name: string; price: string; note: string }[];
+  priceDisclaimer?: string;
   steps: { title: string; desc: string }[];
   faq: { q: string; a: string }[];
 };
@@ -267,10 +268,11 @@ export const services: Service[] = [
     ],
     forWho: "Travle barnefamilier, par i full jobb, eldre, og alle som ønsker rent hjem uten å tenke på det.",
     pricing: [
-      { name: "Hver uke", price: "fra 690 kr/besøk", note: "Beste pris" },
-      { name: "Annenhver uke", price: "fra 790 kr/besøk", note: "Mest populær" },
-      { name: "Hver måned", price: "fra 990 kr/besøk", note: "Vedlikehold" },
+      { name: "Hver uke", price: "fra 1 190 kr/besøk", note: "Beste pris" },
+      { name: "Annenhver uke", price: "fra 1 390 kr/besøk", note: "Mest populær" },
+      { name: "Hver måned", price: "fra 1 690 kr/besøk", note: "Vedlikehold" },
     ],
+    priceDisclaimer: "Prisene baserer seg på mindre boliger og forutsetter normalt vedlikeholdsbehov. Dersom boligen bærer preg av manglende renhold over lengre tid, vil det påløpe et tillegg for en utvidet førstegangsvask på det første besøket for å bringe boligen opp på standard. Dette avtales alltid med deg på forhånd.",
     steps: [
       { title: "Velg frekvens", desc: "Ukentlig, annenhver uke eller månedlig." },
       { title: "Få fastpris", desc: "Tilpasset boligens størrelse." },

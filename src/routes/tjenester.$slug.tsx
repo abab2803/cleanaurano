@@ -83,7 +83,7 @@ function ServiceDetail() {
                   </div>
                 ))}
               </div>
-              <p className="mt-3 text-xs text-muted-foreground">Endelig pris settes etter befaring eller skriftlig tilbud.</p>
+              <p className="mt-3 text-xs text-muted-foreground">{service.priceDisclaimer ?? "Endelig pris settes etter befaring eller skriftlig tilbud."}</p>
             </div>
 
             <div>
