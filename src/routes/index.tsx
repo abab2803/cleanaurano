@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, Sparkles, Leaf, Check, ArrowRight, Star, Quote } from "lucide-react";
+import { ShieldCheck, Sparkles, Leaf, Check, ArrowRight, Star, Quote, Award, SlidersHorizontal } from "lucide-react";
 import heroImg from "@/assets/hero-cleaning.jpg";
 import bucketImg from "@/assets/bucket.jpg";
 import { services } from "@/data/services";
@@ -127,14 +127,17 @@ function Index() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "12 000+", label: "Fornøyde kunder" },
-                { value: "98 %", label: "Anbefaler oss" },
-                { value: "4,9★", label: "Snittvurdering" },
-                { value: "5 år", label: "I markedet" },
-              ].map((s) => (
-                <div key={s.label} className="rounded-2xl bg-background p-8 text-center shadow-sm">
-                  <p className="text-3xl font-bold text-primary">{s.value}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
+                { icon: ShieldCheck, title: "Pålitelig service", desc: "Profesjonelt renhold med fokus på kvalitet, detaljer og et skinnende resultat hver gang." },
+                { icon: Leaf, title: "Miljøvennlige produkter", desc: "Vi bruker skånsomme og effektive rengjøringsprodukter som er trygge for hjem, familie og arbeidsplass." },
+                { icon: SlidersHorizontal, title: "Fleksible løsninger", desc: "Velg renhold som passer dine behov – enten det gjelder fast vask, flyttevask eller bedrift." },
+                { icon: Award, title: "Kvalitetsgaranti", desc: "Vi er ikke fornøyde før du er fornøyd. Vårt mål er høy kvalitet i hvert eneste oppdrag." },
+              ].map((t) => (
+                <div key={t.title} className="rounded-2xl bg-background p-8 text-center shadow-sm transition hover:shadow-md hover:-translate-y-0.5">
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <t.icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
+                  </div>
+                  <p className="mt-4 text-sm font-semibold text-foreground">{t.title}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{t.desc}</p>
                 </div>
               ))}
             </div>
