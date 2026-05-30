@@ -10,6 +10,7 @@ export type Service = {
   benefits: { title: string; desc: string }[];
   forWho: string;
   pricing: { name: string; price: string; note: string }[];
+  priceDisclaimer?: string;
   steps: { title: string; desc: string }[];
   faq: { q: string; a: string }[];
 };
