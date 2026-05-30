@@ -104,6 +104,9 @@ function PricingPage() {
             </div>
           ))}
         </div>
+        <p className="mt-6 text-sm text-muted-foreground">
+          *Prisene baserer seg på mindre boliger og forutsetter normalt vedlikeholdsbehov. Dersom boligen bærer preg av manglende renhold over lengre tid, vil det påløpe et tillegg for en utvidet førstegangsvask på det første besøket for å bringe boligen opp på standard. Dette avtales alltid med deg på forhånd. Prisene inkluderer mva.
+        </p>
       </section>
 
       <section className="bg-primary-soft/50 py-16">
@@ -139,6 +142,7 @@ function PricingPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="text-2xl font-bold text-foreground">Kontorvask – månedspakker</h2>
+        <p className="mt-2 text-sm text-muted-foreground">Prisene gjelder næringsoppdrag og oppgis eksklusive mva.</p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {officePrices.map((o) => (
             <div key={o.size} className="rounded-2xl border border-border bg-card p-6 text-center">
