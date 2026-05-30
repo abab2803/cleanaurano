@@ -9,7 +9,7 @@ export const Route = createFileRoute("/priser")({
   head: () => ({
     meta: [
       { title: "Priser – CleanAura rengjøring" },
-      { name: "description", content: "Transparente priser på rengjøring: hjemmerengjøring fra 690 kr, flyttevask fra 3 490 kr, vindusvask, kontorvask m.m. Ingen skjulte kostnader." },
+      { name: "description", content: "Transparente priser på rengjøring: hjemmerengjøring fra 1 190 kr, flyttevask fra 3 490 kr, vindusvask, kontorvask m.m. Ingen skjulte kostnader." },
       { property: "og:title", content: "Priser – CleanAura" },
       { property: "og:url", content: "/priser" },
     ],
@@ -20,24 +20,24 @@ export const Route = createFileRoute("/priser")({
 const plans = [
   {
     name: "Hver uke",
-    price: "690",
-    unit: "kr/besøk",
+    price: "1 190",
+    unit: "kr / besøk",
     badge: "Beste pris",
     perks: ["Fast renholder", "Inkluderer alt utstyr", "Prioritert booking", "Ingen bindingstid"],
     highlight: false,
   },
   {
     name: "Annenhver uke",
-    price: "790",
-    unit: "kr/besøk",
+    price: "1 390",
+    unit: "kr / besøk",
     badge: "Mest populær",
     perks: ["Fast renholder", "Inkluderer alt utstyr", "Fleksibel endring", "Ingen bindingstid"],
     highlight: true,
   },
   {
     name: "Hver måned",
-    price: "990",
-    unit: "kr/besøk",
+    price: "1 690",
+    unit: "kr / besøk",
     badge: "Vedlikehold",
     perks: ["Fast renholder", "Inkluderer alt utstyr", "Perfekt som tillegg", "Ingen bindingstid"],
     highlight: false,
@@ -46,33 +46,33 @@ const plans = [
 
 const movePrices = [
   { size: "Inntil 50 m²", price: "fra 3 490 kr" },
-  { size: "50–80 m²", price: "fra 4 490 kr" },
-  { size: "80–120 m²", price: "fra 5 990 kr" },
-  { size: "120–180 m²", price: "fra 7 990 kr" },
-  { size: "180–250 m²", price: "fra 9 990 kr" },
+  { size: "50–80 m²", price: "fra 4 690 kr" },
+  { size: "80–120 m²", price: "fra 6 290 kr" },
+  { size: "120–180 m²", price: "fra 8 490 kr" },
+  { size: "180–250 m²", price: "fra 11 990 kr" },
   { size: "250+ m²", price: "Etter befaring" },
 ];
 
 const officePrices = [
-  { size: "Inntil 100 m²", price: "fra 1 490 kr/mnd", note: "1× ukentlig" },
-  { size: "100–300 m²", price: "fra 3 490 kr/mnd", note: "2× ukentlig" },
-  { size: "300–600 m²", price: "fra 6 990 kr/mnd", note: "3× ukentlig" },
-  { size: "600+ m²", price: "Tilbud", note: "Daglig" },
+  { size: "Inntil 100 m²", price: "fra 2 990 kr/mnd", note: "1× ukentlig" },
+  { size: "100–300 m²", price: "fra 6 990 kr/mnd", note: "2× ukentlig" },
+  { size: "300–600 m²", price: "fra 12 990 kr/mnd", note: "3× ukentlig" },
+  { size: "600+ m²", price: "Tilbud", note: "Daglig renhold" },
 ];
 
 const windowPrices = [
   { size: "Leilighet (inntil 10 vinduer)", price: "fra 990 kr" },
-  { size: "Rekkehus/medium", price: "fra 1 490 kr" },
-  { size: "Enebolig", price: "fra 1 990 kr" },
-  { size: "Næringsbygg", price: "Tilbud" },
+  { size: "Rekkehus / medium", price: "fra 1 490 kr" },
+  { size: "Enebolig", price: "fra 2 190 kr" },
+  { size: "Næringsbygg", price: "Tilbud etter befaring" },
 ];
 
 const faqs = [
-  { q: "Hva er inkludert i prisen?", a: "All arbeidskraft, utstyr og miljøvennlige rengjøringsprodukter. Ingen skjulte kostnader." },
-  { q: "Er det MVA på prisene?", a: "Alle priser oppgis inkl. mva for privatpersoner. Bedrifter får priser eks. mva." },
-  { q: "Hvordan betaler jeg?", a: "Vi sender faktura med 10 dagers forfall. Vipps er også mulig for engangsoppdrag." },
-  { q: "Får jeg rabatt på fast renhold?", a: "Ja, opptil 25 % rabatt sammenlignet med enkeltbesøk." },
-  { q: "Hva koster det å avbestille?", a: "Avbestilling med mer enn 24 timers varsel er gratis. Senere belastes 50 %." },
+  { q: "Hva er inkludert i prisen?", a: "All arbeidskraft, profesjonelt utstyr og miljøvennlige rengjøringsprodukter. Ingen skjulte kostnader." },
+  { q: "Er det MVA på prisene?", a: "For privatkunder oppgis alle priser inkludert 25 % mva. For bedriftskunder (kontorvask) oppgis prisene eksklusive mva." },
+  { q: "Hvordan betaler jeg?", a: "Vi sender faktura på e-post eller EHF (for bedrifter) etter utført oppdrag. Privatkunder kan også velge automatisk korttrekk eller Vipps." },
+  { q: "Får jeg rabatt på fast renhold?", a: "Ja, våre abonnementspriser er allerede rabattert sammenlignet med engangsoppdrag. Jo hyppigere vi besøker deg, jo lavere blir prisen per besøk." },
+  { q: "Hva koster det å avbestille?", a: "Du kan fritt avbestille eller flytte timen din inntil 48 timer før avtalt tid. Avbestillinger senere enn dette belastes med 50 % av oppdragets verdi." },
 ];
 
 function PricingPage() {
