@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
 import { Logo } from "./Logo";
 import { services } from "@/data/services";
 import { cities } from "@/data/cities";
@@ -14,9 +13,9 @@ export function Footer() {
             CleanAura er din lokale, profesjonelle rengjøringspartner. Vi leverer skinnende rene resultater med kvalitet, pålitelighet og omtanke.
           </p>
           <div className="mt-5 space-y-2 text-sm text-muted-foreground">
-            <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> 451 31 748</p>
-            <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> post@cleanaura.no</p>
-            <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Oslo, Norge</p>
+            <p>Telefon: 451 31 748</p>
+            <p>E-post: post@cleanaura.no</p>
+            <p>Adresse: Oslo, Norge</p>
           </div>
         </div>
         <div>
