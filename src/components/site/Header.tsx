@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
 import { Logo } from "./Logo";
 
 const nav = [
@@ -32,14 +31,14 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a href="tel:+4745131748" className="hidden items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary md:inline-flex">
-            <Phone className="h-4 w-4" /> 451 31 748
+          <a href="tel:+4745131748" className="hidden text-sm font-medium text-foreground/80 hover:text-primary md:inline-block">
+            451 31 748
           </a>
           <Link to="/kontakt" className="hidden rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:bg-primary/90 md:inline-flex">
             Få gratis tilbud
           </Link>
-          <button onClick={() => setOpen(!open)} className="rounded-md p-2 lg:hidden" aria-label="Meny">
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          <button onClick={() => setOpen(!open)} className="rounded-md p-2 text-sm font-medium text-foreground lg:hidden" aria-label="Meny">
+            {open ? "Lukk" : "Meny"}
           </button>
         </div>
       </div>
