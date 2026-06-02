@@ -2,14 +2,9 @@ import { useState } from "react";
 import { Check, Loader2 } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════
-// BYTT UT DENNE MED DIN EGEN FORMSPREE-ID
-// 1. Gå til https://formspree.io/ og opprett en gratis konto
-// 2. Lag et nytt skjema – du får en unik URL som f.eks.:
-//    https://formspree.io/f/xwplzerv
-// 3. Bytt ut "DIN_FORM_ID_HER" nedenfor med ID-en fra URL-en din
-//    (alt etter /f/ i URL-en)
+// Formspree-endepunkt – koblet til post@cleanaura.no
 // ═══════════════════════════════════════════════════════════════
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/DIN_FORM_ID_HER";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mgobwoeg";
 
 export function ContactForm({ compact = false, defaultService = "" }: { compact?: boolean; defaultService?: string }) {
   const [sent, setSent] = useState(false);
