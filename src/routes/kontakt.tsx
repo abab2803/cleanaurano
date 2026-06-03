@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock, AlertCircle } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { ContactForm } from "@/components/site/ContactForm";
-import { cities } from "@/data/cities";
+import { FAQList } from "@/components/site/FAQList";
 
 export const Route = createFileRoute("/kontakt")({
   component: ContactPage,
@@ -16,6 +16,25 @@ export const Route = createFileRoute("/kontakt")({
     links: [{ rel: "canonical", href: "/kontakt" }],
   }),
 });
+
+const faqs = [
+  {
+    q: "Må jeg være hjemme når dere vasker?",
+    a: "Nei, det er opp til deg. De fleste av våre faste kunder er på jobb. Du kan trygt overlevere nøkkel på forhånd, oppgi kode til elektronisk lås, eller benytte en avtalt nøkkelboks.",
+  },
+  {
+    q: "Hva er inkludert i deres 100 % fornøydhetsgaranti?",
+    a: "Din tilfredshet er vår høyeste prioritet. Hvis noe ikke skulle leve opp til forventningene, melder du fra til oss innen 24 timer, så kommer vi tilbake og utbedrer det kostnadsfritt så fort som mulig.",
+  },
+  {
+    q: "Er det bindingstid på vaskeavtalene?",
+    a: "Nei, hos CleanAura har vi ingen bindingstid. Du kan når som helst pause, endre frekvens eller avbestille. Det eneste vi ber om er at endringer gjøres senest 48 timer før avtalt oppstart.",
+  },
+  {
+    q: "Holder dere vaskeutstyr og produkter selv?",
+    a: "Ja, vi stiller med alt av profesjonelt vaskeutstyr og miljøvennlige rengjøringsmidler av høy kvalitet. Du trenger ikke å klargjøre noe som helst på forhånd.",
+  },
+];
 
 function ContactPage() {
   return (
@@ -39,8 +58,8 @@ function ContactPage() {
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">
               <MapPin className="h-6 w-6 text-primary" />
-              <h3 className="mt-3 font-semibold text-foreground">Adresse</h3>
-              <p className="mt-1 text-foreground">CleanAura AS<br />Karl Johans gate 1<br />0154 Oslo</p>
+              <h3 className="mt-3 font-semibold text-foreground">Område</h3>
+              <p className="mt-1 text-foreground">Oslo og omegn</p>
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">
               <Clock className="h-6 w-6 text-primary" />
@@ -48,21 +67,26 @@ function ContactPage() {
               <ul className="mt-1 space-y-1 text-sm text-muted-foreground">
                 <li>Man–Fre: 07:00–18:00</li>
                 <li>Lørdag: 09:00–15:00</li>
-                <li>Søndag: Stengt (akutt tlf)</li>
+                <li>Søndag: Stengt</li>
               </ul>
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <ContactForm />
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold text-foreground">Ofte stilte spørsmål</h2>
+              <p className="mt-2 text-sm text-muted-foreground">Svar på det kundene våre lurer mest på.</p>
+              <div className="mt-5">
+                <FAQList items={faqs} />
+              </div>
+            </div>
 
-            <div className="mt-8 overflow-hidden rounded-2xl border border-border">
-              <iframe
-                title="Kart"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=10.736%2C59.910%2C10.760%2C59.918&amp;layer=mapnik"
-                className="h-80 w-full"
-                loading="lazy"
-              />
+            <div id="skjema" className="scroll-mt-24">
+              <h2 className="text-2xl font-bold text-foreground">Få et uforpliktende tilbud</h2>
+              <p className="mt-2 text-sm text-muted-foreground">Fyll ut skjemaet, så svarer vi innen 24 timer.</p>
+              <div className="mt-5">
+                <ContactForm />
+              </div>
             </div>
 
             <div className="mt-8 flex items-start gap-4 rounded-2xl border border-primary/30 bg-primary-soft/60 p-6">
@@ -70,14 +94,9 @@ function ContactPage() {
               <div>
                 <h3 className="font-semibold text-foreground">Akutt rengjøring – samme dag</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Trenger du hjelp i dag? Vi har akutt-team på vakt i Oslo-området. Ring oss direkte på 451 31 748 – vi rykker ut innen 4 timer ved kapasitet.
+                  Trenger du hjelp i dag? Ring oss direkte på 451 31 748 – vi rykker ut innen 4 timer ved ledig kapasitet.
                 </p>
               </div>
-            </div>
-
-            <div className="mt-10">
-              <h3 className="text-lg font-semibold text-foreground">Vi betjener disse områdene</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{cities.map((c) => c.name).join(" · ")} og omegn.</p>
             </div>
           </div>
         </div>
