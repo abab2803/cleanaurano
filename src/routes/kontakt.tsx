@@ -73,19 +73,19 @@ function ContactPage() {
           </div>
 
           <div className="lg:col-span-2">
+            <div id="skjema" className="scroll-mt-24 mb-10">
+              <h2 className="text-2xl font-bold text-foreground">Få et uforpliktende tilbud</h2>
+              <p className="mt-2 text-sm text-muted-foreground">Fyll ut skjemaet, så svarer vi innen 24 timer.</p>
+              <div className="mt-5">
+                <ContactForm />
+              </div>
+            </div>
+
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-foreground">Ofte stilte spørsmål</h2>
               <p className="mt-2 text-sm text-muted-foreground">Svar på det kundene våre lurer mest på.</p>
               <div className="mt-5">
                 <FAQList items={faqs} />
-              </div>
-            </div>
-
-            <div id="skjema" className="scroll-mt-24">
-              <h2 className="text-2xl font-bold text-foreground">Få et uforpliktende tilbud</h2>
-              <p className="mt-2 text-sm text-muted-foreground">Fyll ut skjemaet, så svarer vi innen 24 timer.</p>
-              <div className="mt-5">
-                <ContactForm />
               </div>
             </div>
 
