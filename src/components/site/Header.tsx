@@ -3,12 +3,9 @@ import { useState } from "react";
 import { Logo } from "./Logo";
 
 const nav = [
-  { to: "/tjenester", label: "Tjenester" },
+  { to: "/", label: "Hjem" },
   { to: "/priser", label: "Priser" },
-  { to: "/omrader", label: "Områder" },
   { to: "/om-oss", label: "Om oss" },
-  { to: "/blog", label: "Blogg" },
-  { to: "/faq", label: "FAQ" },
   { to: "/kontakt", label: "Kontakt" },
 ] as const;
 
@@ -25,6 +22,7 @@ export function Header() {
               to={n.to}
               className="text-sm text-foreground/80 transition hover:text-primary"
               activeProps={{ className: "text-sm text-primary font-medium" }}
+              activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
             </Link>
