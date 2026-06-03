@@ -12,14 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PriserRouteImport } from './routes/priser'
 import { Route as OmOssRouteImport } from './routes/om-oss'
 import { Route as KontaktRouteImport } from './routes/kontakt'
-import { Route as FaqRouteImport } from './routes/faq'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as TjenesterIndexRouteImport } from './routes/tjenester.index'
-import { Route as OmraderIndexRouteImport } from './routes/omrader.index'
-import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as TjenesterSlugRouteImport } from './routes/tjenester.$slug'
-import { Route as OmraderCityRouteImport } from './routes/omrader.$city'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const PriserRoute = PriserRouteImport.update({
   id: '/priser',
@@ -36,141 +29,44 @@ const KontaktRoute = KontaktRouteImport.update({
   path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TjenesterIndexRoute = TjenesterIndexRouteImport.update({
-  id: '/tjenester/',
-  path: '/tjenester/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OmraderIndexRoute = OmraderIndexRouteImport.update({
-  id: '/omrader/',
-  path: '/omrader/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TjenesterSlugRoute = TjenesterSlugRouteImport.update({
-  id: '/tjenester/$slug',
-  path: '/tjenester/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OmraderCityRoute = OmraderCityRouteImport.update({
-  id: '/omrader/$city',
-  path: '/omrader/$city',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/faq': typeof FaqRoute
   '/kontakt': typeof KontaktRoute
   '/om-oss': typeof OmOssRoute
   '/priser': typeof PriserRoute
-  '/blog/$slug': typeof BlogSlugRoute
-  '/omrader/$city': typeof OmraderCityRoute
-  '/tjenester/$slug': typeof TjenesterSlugRoute
-  '/blog/': typeof BlogIndexRoute
-  '/omrader/': typeof OmraderIndexRoute
-  '/tjenester/': typeof TjenesterIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/faq': typeof FaqRoute
   '/kontakt': typeof KontaktRoute
   '/om-oss': typeof OmOssRoute
   '/priser': typeof PriserRoute
-  '/blog/$slug': typeof BlogSlugRoute
-  '/omrader/$city': typeof OmraderCityRoute
-  '/tjenester/$slug': typeof TjenesterSlugRoute
-  '/blog': typeof BlogIndexRoute
-  '/omrader': typeof OmraderIndexRoute
-  '/tjenester': typeof TjenesterIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/faq': typeof FaqRoute
   '/kontakt': typeof KontaktRoute
   '/om-oss': typeof OmOssRoute
   '/priser': typeof PriserRoute
-  '/blog/$slug': typeof BlogSlugRoute
-  '/omrader/$city': typeof OmraderCityRoute
-  '/tjenester/$slug': typeof TjenesterSlugRoute
-  '/blog/': typeof BlogIndexRoute
-  '/omrader/': typeof OmraderIndexRoute
-  '/tjenester/': typeof TjenesterIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/faq'
-    | '/kontakt'
-    | '/om-oss'
-    | '/priser'
-    | '/blog/$slug'
-    | '/omrader/$city'
-    | '/tjenester/$slug'
-    | '/blog/'
-    | '/omrader/'
-    | '/tjenester/'
+  fullPaths: '/' | '/kontakt' | '/om-oss' | '/priser'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/faq'
-    | '/kontakt'
-    | '/om-oss'
-    | '/priser'
-    | '/blog/$slug'
-    | '/omrader/$city'
-    | '/tjenester/$slug'
-    | '/blog'
-    | '/omrader'
-    | '/tjenester'
-  id:
-    | '__root__'
-    | '/'
-    | '/faq'
-    | '/kontakt'
-    | '/om-oss'
-    | '/priser'
-    | '/blog/$slug'
-    | '/omrader/$city'
-    | '/tjenester/$slug'
-    | '/blog/'
-    | '/omrader/'
-    | '/tjenester/'
+  to: '/' | '/kontakt' | '/om-oss' | '/priser'
+  id: '__root__' | '/' | '/kontakt' | '/om-oss' | '/priser'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  FaqRoute: typeof FaqRoute
   KontaktRoute: typeof KontaktRoute
   OmOssRoute: typeof OmOssRoute
   PriserRoute: typeof PriserRoute
-  BlogSlugRoute: typeof BlogSlugRoute
-  OmraderCityRoute: typeof OmraderCityRoute
-  TjenesterSlugRoute: typeof TjenesterSlugRoute
-  BlogIndexRoute: typeof BlogIndexRoute
-  OmraderIndexRoute: typeof OmraderIndexRoute
-  TjenesterIndexRoute: typeof TjenesterIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -196,13 +92,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -210,63 +99,14 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tjenester/': {
-      id: '/tjenester/'
-      path: '/tjenester'
-      fullPath: '/tjenester/'
-      preLoaderRoute: typeof TjenesterIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/omrader/': {
-      id: '/omrader/'
-      path: '/omrader'
-      fullPath: '/omrader/'
-      preLoaderRoute: typeof OmraderIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/': {
-      id: '/blog/'
-      path: '/blog'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tjenester/$slug': {
-      id: '/tjenester/$slug'
-      path: '/tjenester/$slug'
-      fullPath: '/tjenester/$slug'
-      preLoaderRoute: typeof TjenesterSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/omrader/$city': {
-      id: '/omrader/$city'
-      path: '/omrader/$city'
-      fullPath: '/omrader/$city'
-      preLoaderRoute: typeof OmraderCityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  FaqRoute: FaqRoute,
   KontaktRoute: KontaktRoute,
   OmOssRoute: OmOssRoute,
   PriserRoute: PriserRoute,
-  BlogSlugRoute: BlogSlugRoute,
-  OmraderCityRoute: OmraderCityRoute,
-  TjenesterSlugRoute: TjenesterSlugRoute,
-  BlogIndexRoute: BlogIndexRoute,
-  OmraderIndexRoute: OmraderIndexRoute,
-  TjenesterIndexRoute: TjenesterIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
